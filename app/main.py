@@ -6,11 +6,16 @@ import base64
 import torch
 import io
 import os
+import sys
+import pathlib 
 from consumerOpenAI import response_openai
 
 app = Flask(__name__)
 
-
+# Fix para compatibilidad de modelos entrenados en Windows
+if sys.platform != "win32":
+    pathlib.WindowsPath = pathlib.PosixPath
+    
 # Cargar modelo
 BASE_DIR = os.path.dirname(__file__)
 path_yolov5 = os.path.join(BASE_DIR, 'yolov5')

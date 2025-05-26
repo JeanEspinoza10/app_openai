@@ -16,7 +16,6 @@ build/
 venv/
 env/
 .venv/
-.env/
 
 # Ignorar archivos de configuración del sistema y editor
 .idea/
