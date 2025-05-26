@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    container_name: app_openai
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    ports:
+      - "7215:5000"
+    command: python main.py
