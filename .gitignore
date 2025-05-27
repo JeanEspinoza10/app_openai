@@ -100,7 +100,6 @@ venv.bak/
 # Ignore model files or weights (e.g., PyTorch, TensorFlow)
 *.h5
 *.pth
-*.pt
 *.ckpt
 output/
 yolov5/
